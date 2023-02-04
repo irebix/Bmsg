@@ -13,7 +13,7 @@
 setTimeout(
     function() {
         'use strict';
-        //遍历所有消息框，
+        //遍历所有消息框
         document.querySelectorAll('.send-box').forEach(qs => {
             console.log(qs);
             //创建按钮和备选项box
