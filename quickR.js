@@ -2,8 +2,9 @@
 // @name         哔哩私信快捷回复
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  哔哩私信快捷回复
+// @description  哔哩私信快捷回复菜单
 // @author       rebix
+// @license      MIT
 // @match        https://message.bilibili.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilibili.com
 // ==/UserScript==
