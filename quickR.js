@@ -24,7 +24,7 @@ setTimeout(
 
 
             let box = document.createElement("box");
-            box.style = "height: 200px; display: none; text-align: center";
+            box.style = "height: 200px; display: none; text-align: center; line-height: 50px";
             box.innerText = "text"
 
             //设定默认box不显示
