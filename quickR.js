@@ -10,7 +10,6 @@
 // ==/UserScript==
 
 //延时加载
-//change test
 setTimeout(
     function() {
         'use strict';
@@ -21,8 +20,11 @@ setTimeout(
             let btn=document.createElement("button");
             btn.innerText="快捷回复";
             btn.style = "height: 30px";
+
+
+
             let box = document.createElement("box");
-            box.style = "height: 200px;display: none";
+            box.style = "height: 200px; display: none; text-align: center";
             box.innerText = "text"
 
             //设定默认box不显示
