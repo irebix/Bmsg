@@ -14,6 +14,15 @@
 setTimeout(
     function() {
         'use strict';
+        //回复列表
+        var rList = [
+            "(°∀°)ﾉhi",
+            "号左右会有一版草稿，那我先接历",
+            "久等历，您看看这是草稿阶段，有问题请尽管提‍[兔年]",
+            "您看看这是完成稿，有问题也请尽管提(=・ω・=)",
+            "感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪"
+        ]
+
         //遍历所有消息框
         document.querySelectorAll('.send-box').forEach(qs => {
             console.log(qs);
@@ -25,11 +34,15 @@ setTimeout(
             let box = document.createElement("box");
             box.style = "height: 200px; display: none; text-align: center; vertical-align: middle;";
 
-            textContent("(°∀°)ﾉhi");
-            textContent("号左右会有一版草稿，那我先接历");
-            textContent("久等历，您看看这是草稿阶段，有问题请尽管提‍[兔年]");
-            textContent("您看看这是完成稿，有问题也请尽管提(=・ω・=)");
-            textContent("感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪");
+            rList.forEach(function (text) {
+                textContent(text);
+            });
+
+            // textContent("(°∀°)ﾉhi");
+            // textContent("号左右会有一版草稿，那我先接历");
+            // textContent("久等历，您看看这是草稿阶段，有问题请尽管提‍[兔年]");
+            // textContent("您看看这是完成稿，有问题也请尽管提(=・ω・=)");
+            // textContent("感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪");
 
             //创建快捷回复内容
             function textContent(content){
