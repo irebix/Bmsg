@@ -25,7 +25,6 @@ setTimeout(
 
         //遍历所有消息框
         document.querySelectorAll('.send-box').forEach(qs => {
-            console.log(qs);
             //创建按钮和备选项box
             let btn=document.createElement("button");
             btn.innerText="快捷回复";
@@ -34,15 +33,14 @@ setTimeout(
             let box = document.createElement("box");
             box.style = "height: 200px; display: none; text-align: center; vertical-align: middle;";
 
+            let popup = document.createElement("box");
+            popup.innerHTML="已复制";
+            popup.style = "font-size: 12px; display: none; text-align: center;";
+
+            //添加到列表
             rList.forEach(function (text) {
                 textContent(text);
             });
-
-            // textContent("(°∀°)ﾉhi");
-            // textContent("号左右会有一版草稿，那我先接历");
-            // textContent("久等历，您看看这是草稿阶段，有问题请尽管提‍[兔年]");
-            // textContent("您看看这是完成稿，有问题也请尽管提(=・ω・=)");
-            // textContent("感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪");
 
             //创建快捷回复内容
             function textContent(content){
@@ -56,8 +54,11 @@ setTimeout(
                     box.style.display="none";
                     boxDisplay = true;
                     let input = document.querySelector(".core-style");
+                    //popup
+                    popup.style.display="block";
+                    setTimeout(function() { popup.style.display="none";}, 1500);                  
                     //input.innerHTML = content;
-                    input.value = content;
+                    //input.value = content;
 
                 };
                 
@@ -85,6 +86,7 @@ setTimeout(
                 box.style.display="none";
                 boxDisplay = true;
             }
+            qs.parentElement.insertBefore(popup,qs);
             qs.parentElement.insertBefore(box,qs);
             qs.parentElement.insertBefore(btn,qs);
         });
