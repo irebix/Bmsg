@@ -32,7 +32,7 @@ setTimeout(
 
             let box = document.createElement("box");
             var boxHeight = 40*rList.length
-            box.style = `height:${boxHeight}; display: none; text-align: center; vertical-align: middle;`;
+            box.style = `height:${boxHeight}px; display: none; text-align: center; vertical-align: middle;`;
 
             let popup = document.createElement("box");
             popup.innerHTML="已复制";
