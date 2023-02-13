@@ -19,6 +19,7 @@ setTimeout(
             "(°∀°)ﾉhi",
             "号左右会有一版草稿，那我先接历",
             "久等历，您看看这是草稿阶段，有问题请尽管提‍[兔年]",
+            "好滴那我继续画下去历，您记得点一下确认阶段~(°∀°)ﾉ",
             "您看看这是完成稿，有问题也请尽管提(=・ω・=)",
             "感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪"
         ]
@@ -30,11 +31,15 @@ setTimeout(
             btn.style = "height: 36px";
 
             let box = document.createElement("box");
-            box.style = "height: 200px; display: none; text-align: center; vertical-align: middle;";
+            var boxHeight = 40*rList.length
+            box.style = `height:${boxHeight}; display: none; text-align: center; vertical-align: middle;`;
 
             let popup = document.createElement("box");
             popup.innerHTML="已复制";
             popup.style = "font-size: 12px; display: none; text-align: center;";
+
+            //设定默认box不显示
+            let boxDisplay = true;
 
             //添加到列表
             rList.forEach(function (text) {
@@ -58,7 +63,6 @@ setTimeout(
                     setTimeout(function() { popup.style.display="none";}, 1500);
                     //input.innerHTML = content;
                     //input.value = content;
-
                 };
 
                 box.appendChild(text);
@@ -67,9 +71,6 @@ setTimeout(
                 box.appendChild(br);
             }
 
-
-            //设定默认box不显示
-            let boxDisplay = true;
             btn.onclick=function(){
                 //切换显示
                 if (boxDisplay) {
@@ -78,7 +79,6 @@ setTimeout(
                     box.style.display="none";
                 }
                 boxDisplay = !boxDisplay;
-
             };
             //点击空白处隐藏box
             document.onclick=function(){
