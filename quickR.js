@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         哔哩私信快捷回复
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  哔哩私信快捷回复菜单
 // @author       rebix
 // @license      MIT
@@ -24,7 +24,7 @@ setTimeout(
             "感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪"
         ]
         //显示延迟
-        showDelay = 3000
+        var showDelay = 2500
         //遍历所有消息框
         document.querySelectorAll('.send-box').forEach(qs => {
             //创建按钮和备选项box
