@@ -92,4 +92,4 @@ setTimeout(
         });
 
         //btnArea.insertBefore(btn, qs.children[0]);
-    },2500)
+    },1200)
