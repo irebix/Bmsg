@@ -23,8 +23,7 @@ setTimeout(
             "您看看这是完成稿，有问题也请尽管提(=・ω・=)",
             "感谢关照~方便的话请赏一个评论吧嘿嘿(*°▽°*)八(*°▽°*)♪"
         ]
-        //显示延迟
-        var showDelay = 2500
+        
         //遍历所有消息框
         document.querySelectorAll('.send-box').forEach(qs => {
             //创建按钮和备选项box
@@ -93,4 +92,4 @@ setTimeout(
         });
 
         //btnArea.insertBefore(btn, qs.children[0]);
-    },showDelay)
+    },2500)
